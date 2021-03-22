@@ -12,7 +12,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="viewController_tabBar" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="viewController_tabBar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -40,10 +40,51 @@
             </objects>
             <point key="canvasLocation" x="1002.8985507246377" y="49.553571428571423"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Details-->
+        <scene sceneID="NLz-yZ-jk2">
+            <objects>
+                <viewController storyboardIdentifier="Details" title="Details" id="YZW-WC-tLF" customClass="Details" customModule="viewController_tabBar" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MPW-ag-JGA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bQn-SJ-CLA">
+                                <rect key="frame" x="16" y="60" width="382" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="ynU-72-X8s"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mlq-Za-sQT">
+                                <rect key="frame" x="16" y="389" width="41.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="OLM-yv-jHH"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bQn-SJ-CLA" firstAttribute="leading" secondItem="OLM-yv-jHH" secondAttribute="leading" constant="16" id="0Z1-BC-HNC"/>
+                            <constraint firstItem="bQn-SJ-CLA" firstAttribute="top" secondItem="OLM-yv-jHH" secondAttribute="top" constant="16" id="84V-B2-USz"/>
+                            <constraint firstItem="OLM-yv-jHH" firstAttribute="trailing" secondItem="bQn-SJ-CLA" secondAttribute="trailing" constant="16" id="J3Y-dX-MSl"/>
+                            <constraint firstItem="Mlq-Za-sQT" firstAttribute="leading" secondItem="OLM-yv-jHH" secondAttribute="leading" constant="16" id="fZu-bO-fY6"/>
+                            <constraint firstItem="OLM-yv-jHH" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Mlq-Za-sQT" secondAttribute="trailing" symbolic="YES" id="o43-wH-ppf"/>
+                            <constraint firstItem="Mlq-Za-sQT" firstAttribute="top" secondItem="bQn-SJ-CLA" secondAttribute="bottom" constant="29" id="tpr-wK-NIt"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="dImage" destination="bQn-SJ-CLA" id="S9i-Xz-hkt"/>
+                        <outlet property="dTxt" destination="Mlq-Za-sQT" id="MzA-kz-TxA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E5o-8D-x2j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1776.8115942028987" y="40.848214285714285"/>
+        </scene>
+        <!--Main-->
         <scene sceneID="j0K-gO-X1L">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4gW-hu-4k6" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="Main" title="Main" automaticallyAdjustsScrollViewInsets="NO" id="4gW-hu-4k6" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="sMN-Ce-sWu">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
